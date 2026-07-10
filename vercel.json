@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "META_ACCESS_TOKEN": "@meta_access_token",
+    "META_APP_ID": "@meta_app_id",
+    "META_APP_SECRET": "@meta_app_secret",
+    "NODE_ENV": "production"
+  }
+}
