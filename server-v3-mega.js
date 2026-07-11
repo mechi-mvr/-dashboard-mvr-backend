@@ -283,6 +283,66 @@ app.get('/api/validar/:cliente', (req, res) => {
 });
 
 /**
+ * Endpoint SIMPLE: Dashboard Al Capone
+ */
+app.get('/al-capone', (req, res) => {
+  const dashboard = {
+    cliente: "Al Capone Indumentaria",
+    periodo: "1-10 julio 2026",
+    resumen: {
+      ventas: 6,
+      roas: 6.10,
+      gasto: 51.42,
+      impressiones: 26236,
+      clics: 703,
+      cpc: 0.11,
+      estado: "ESCALANDO ⬆️"
+    },
+    creativos: [
+      {
+        nombre: "Bomber_producto_variedadcolor",
+        estado: "GANADOR ⭐",
+        roas: 10.11,
+        conversiones: 4,
+        cpc: 0.16,
+        ctr: 1.47,
+        accion: "ESCALAR"
+      },
+      {
+        nombre: "Bomber_producto_detalle",
+        estado: "SECUNDARIO",
+        roas: 2.32,
+        conversiones: 1,
+        accion: "MANTENER"
+      }
+    ],
+    proximo_paso: "Subir foto CALLE + DETALLES, escalar presupuesto a $12/día"
+  };
+  res.json(dashboard);
+});
+
+/**
+ * Endpoint SIMPLE: Dashboard Pijamería
+ */
+app.get('/pijameria', (req, res) => {
+  const dashboard = {
+    cliente: "Pijamería",
+    periodo: "Junio 2026",
+    resumen: {
+      ventas: 36,
+      roas: 13,
+      facturacion: 3972093,
+      estado: "LIQUIDACION - CIERRE 25 JULIO"
+    },
+    creativo_top: {
+      nombre: "Video Familia Argentina",
+      roas: 152
+    }
+  };
+  res.json(dashboard);
+});
+
+/**
  * Endpoint: Health check mejorado
  */
 app.get('/api/health', (req, res) => {
