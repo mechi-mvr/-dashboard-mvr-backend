@@ -285,7 +285,7 @@ app.get('/api/validar/:cliente', (req, res) => {
 /**
  * Endpoint SIMPLE: Dashboard Al Capone
  */
-app.get('/al-capone', (req, res) => {
+app.get('/api/al-capone', (req, res) => {
   const dashboard = {
     cliente: "Al Capone Indumentaria",
     periodo: "1-10 julio 2026",
@@ -324,7 +324,7 @@ app.get('/al-capone', (req, res) => {
 /**
  * Endpoint SIMPLE: Dashboard Pijamería
  */
-app.get('/pijameria', (req, res) => {
+app.get('/api/pijameria', (req, res) => {
   const dashboard = {
     cliente: "Pijamería",
     periodo: "Junio 2026",
